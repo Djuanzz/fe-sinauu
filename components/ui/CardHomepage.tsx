@@ -9,6 +9,7 @@ interface CardProps {
   participants: string;
   rating: string;
   status: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   src: any;
 }
 

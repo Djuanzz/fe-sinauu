@@ -144,23 +144,23 @@ export async function loginAction(
   }
 }
 
-function setCookie(
-  name: string,
-  value: string,
-  options: {
-    httpOnly?: boolean;
-    secure?: boolean;
-    maxAge?: number;
-    path?: string;
-  } = {}
-) {
-  cookies().set(name, value, {
-    httpOnly: options.httpOnly ?? true,
-    secure: options.secure ?? process.env.NODE_ENV === "production",
-    maxAge: options.maxAge ?? 15 * 60, // 15 menit default
-    path: options.path ?? "/",
-  });
-}
+// function setCookie(
+//   name: string,
+//   value: string,
+//   options: {
+//     httpOnly?: boolean;
+//     secure?: boolean;
+//     maxAge?: number;
+//     path?: string;
+//   } = {}
+// ) {
+//   cookies().set(name, value, {
+//     httpOnly: options.httpOnly ?? true,
+//     secure: options.secure ?? process.env.NODE_ENV === "production",
+//     maxAge: options.maxAge ?? 15 * 60, // 15 menit default
+//     path: options.path ?? "/",
+//   });
+// }
 
 // // -- GET SESSION --
 // export async function getSession() {
