@@ -146,14 +146,12 @@ export default function ClassDetail() {
             <div className="flex justify-between items-center mb-6">
               <h1
                 className="text-xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-semibold text-gray-700 cursor-pointer hover:text-[#3498DB] transition-colors duration-300 break-words"
-                onClick={() => setShowFullTitle(true)}
-              >
+                onClick={() => setShowFullTitle(true)}>
                 {showFullTitle ? classData.name : truncatedTitle}
               </h1>
               <div
                 className="flex items-center px-4 py-2 rounded-full cursor-pointer"
-                onClick={() => setIsRatingModalOpen(true)}
-              >
+                onClick={() => setIsRatingModalOpen(true)}>
                 {[...Array(5)].map((_, index) =>
                   index < Math.round(classData.rating) ? (
                     <FaStar key={index} className="text-[#3498DB] mr-1" />
@@ -212,8 +210,7 @@ export default function ClassDetail() {
             <div className="border-t border-gray-100 pt-6">
               <button
                 onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
-                className="w-full group"
-              >
+                className="w-full group">
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-semibold text-gray-800 group-hover:text-[#3498DB] transition-colors duration-300">
                     Description
@@ -228,8 +225,7 @@ export default function ClassDetail() {
               <div
                 className={`mt-4 overflow-hidden transition-all duration-500 ease-in-out ${
                   isDescriptionExpanded ? "max-h-96" : "max-h-0"
-                }`}
-              >
+                }`}>
                 <p className="text-gray-600 leading-relaxed">
                   {classData.description}
                 </p>
@@ -239,8 +235,7 @@ export default function ClassDetail() {
             <div className="mt-8 flex justify-center">
               <button
                 className="bg-[#3498DB] text-white px-8 py-3 rounded-full hover:bg-[#2980b9] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
-                onClick={handleVisitTopics}
-              >
+                onClick={handleVisitTopics}>
                 Learn More
               </button>
             </div>
@@ -250,8 +245,7 @@ export default function ClassDetail() {
         <div
           className={`fixed inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-300 ${
             isRatingModalOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-        >
+          }`}>
           <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md flex flex-col h-[300px]">
             <h2 className="text-2xl font-semibold text-center text-gray-800 mb-16">
               Rate this class
@@ -270,14 +264,12 @@ export default function ClassDetail() {
             <div className="flex justify-end mt-auto">
               <button
                 className="bg-[#3498DB] text-white px-6 py-2 rounded-full hover:bg-[#2980b9] transition-colors duration-300 mr-2 shadow-md"
-                onClick={handleRating}
-              >
+                onClick={handleRating}>
                 Save
               </button>
               <button
                 className="text-gray-600 hover:text-gray-800 bg-gray-100 hover:bg-gray-200 rounded-full px-6 py-2 transition-colors duration-300 shadow-md"
-                onClick={() => setIsRatingModalOpen(false)}
-              >
+                onClick={() => setIsRatingModalOpen(false)}>
                 Cancel
               </button>
             </div>
