@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+// import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -54,8 +54,7 @@ export const CardContainer = ({
         )}
         style={{
           perspective: "1000px",
-        }}
-      >
+        }}>
         <div
           ref={containerRef}
           onMouseEnter={handleMouseEnter}
@@ -67,8 +66,7 @@ export const CardContainer = ({
           )}
           style={{
             transformStyle: "preserve-3d",
-          }}
-        >
+          }}>
           {children}
         </div>
       </div>
@@ -88,8 +86,7 @@ export const CardBody = ({
       className={cn(
         "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
-      )}
-    >
+      )}>
       {children}
     </div>
   );
@@ -138,8 +135,7 @@ export const CardItem = ({
     <Tag
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
-      {...rest}
-    >
+      {...rest}>
       {children}
     </Tag>
   );

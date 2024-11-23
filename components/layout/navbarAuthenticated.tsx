@@ -123,8 +123,7 @@ export default function NavbarAuthenticated() {
   return (
     <nav
       className="sticky top-0 z-50 bg-white shadow-sm dark:bg-gray-950/90"
-      style={isLoading ? { filter: "blur(5px)" } : {}}
-    >
+      style={isLoading ? { filter: "blur(5px)" } : {}}>
       <section className="w-full max-w-7xl mx-auto px-6">
         <div className="flex justify-between h-16 items-center gap-8">
           <div className="flex flex-row items-center">
@@ -142,20 +141,17 @@ export default function NavbarAuthenticated() {
             <nav className="flex gap-12">
               <Link
                 href="/"
-                className="font-medium text-sm text-gray-600 hover:text-gray-900"
-              >
+                className="font-medium text-sm text-gray-600 hover:text-gray-900">
                 Home
               </Link>
               <Link
                 href="/dashboard"
-                className="font-medium text-sm text-gray-600 hover:text-gray-900"
-              >
+                className="font-medium text-sm text-gray-600 hover:text-gray-900">
                 Dashboard
               </Link>
               <Link
                 href="/about"
-                className="font-medium text-sm text-gray-600 hover:text-gray-900"
-              >
+                className="font-medium text-sm text-gray-600 hover:text-gray-900">
                 About us
               </Link>
             </nav>
@@ -164,8 +160,7 @@ export default function NavbarAuthenticated() {
           <div className="flex items-center gap-6">
             <button
               className="p-2 text-gray-600 hover:text-gray-900"
-              aria-label="Search"
-            >
+              aria-label="Search">
               <Search className="w-5 h-5" />
             </button>
 
@@ -174,8 +169,7 @@ export default function NavbarAuthenticated() {
                 {isAuthenticated && (
                   <button
                     className="p-2 text-gray-600 hover:text-gray-900"
-                    aria-label="Apps"
-                  >
+                    aria-label="Apps">
                     <LayoutGrid className="w-5 h-5 block sm:hidden" />
                   </button>
                 )}
@@ -184,24 +178,21 @@ export default function NavbarAuthenticated() {
                 <DropdownMenuItem asChild>
                   <Link
                     href="/"
-                    className="flex items-center w-full cursor-pointer"
-                  >
+                    className="flex items-center w-full cursor-pointer">
                     Home
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link
                     href="/dashboard"
-                    className="flex items-center w-full cursor-pointer"
-                  >
+                    className="flex items-center w-full cursor-pointer">
                     Dashboard
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link
                     href="/about"
-                    className="flex items-center w-full cursor-pointer"
-                  >
+                    className="flex items-center w-full cursor-pointer">
                     About us
                   </Link>
                 </DropdownMenuItem>
@@ -219,8 +210,7 @@ export default function NavbarAuthenticated() {
 
                 <DropdownMenuContent
                   align="end"
-                  className="w-72 p-6 rounded-xl shadow-lg transform transition-all duration-200 hover:scale-102 bg-white"
-                >
+                  className="w-72 p-6 rounded-xl shadow-lg transform transition-all duration-200 hover:scale-102 bg-white">
                   <div className="relative group">
                     <Avatar className="h-16 w-16 transform transition-all duration-500 hover:scale-110 border-4 border-[#3498db] shadow-xl group-hover:shadow-2xl relative z-10 ">
                       <AvatarImage
@@ -249,8 +239,7 @@ export default function NavbarAuthenticated() {
                     <DropdownMenuSeparator className="bg-gray-300" />
                     <DropdownMenuItem
                       onClick={handleSignOut}
-                      className="cursor-pointer rounded-lg transition-all duration-200 hover:bg-gray-50 group mt-3 h-2"
-                    >
+                      className="cursor-pointer rounded-lg transition-all duration-200 hover:bg-gray-50 group mt-3 h-2">
                       <LogOut className="w-5 h-5 mr-3 text-gray-700 group-hover:text-gray-700 transition-colors duration-200" />
                       <span className="font-medium text-gray-800 group-hover:text-gray-900 transition-colors duration-200">
                         Logout
